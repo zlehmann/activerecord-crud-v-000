@@ -5,6 +5,8 @@
 #   movie = __                     #   movie = Movie.new
 # end                              # end
 
+require 'pry'
+
 def can_be_instantiated_and_then_saved
   movie = Movie.new
   movie.title = "This is a title."
@@ -29,7 +31,7 @@ def can_be_created_in_a_block(args = {:title => "Home Alone", :release_date => 1
   # release_date == 1990
 
   Movie.create do |m|
-    __
+    binding.pry
   end
 end
 
